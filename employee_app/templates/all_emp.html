@@ -1,1 +1,31 @@
-<h3>all </h3>
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Bonds</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Hire date</th>
+            <th scope="col">Depertment</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for employee in all_employee %}
+          <tr>
+            <th scope="row">{{ employee.id }}</th>
+            <td>{{ employee.first_name }}</td>
+            <td>{{ employee.last_name }}</td>
+            <td>{{ employee.salary }}</td>
+            <td>{{ employee.bnods }}</td>
+            <td>+88{{ employee.phone_number }}</td>
+            <td>{{ employee.hire_date }}</td>
+            <td>{{ employee.dept.name }}</td>
+            <td>{{ employee.role.name }}</td>
+          </tr>
+            {% endfor %}
+        </tbody>
+
+  </table>

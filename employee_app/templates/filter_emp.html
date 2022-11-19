@@ -1,1 +1,21 @@
-<h3>Filter</h3>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <h1>Filter Employee Details!</h1>
+  <hr>
+  <form action="/filter_emp" method="post">
+    {% csrf_token %}
+    <label for="name">Employee First/Last Name</label><br>
+    <input type="text" id="name" name="name" value="{{ name }}"><br>
+    <label for="dept">Department</label><br>
+    <input type="text" id="dept" name="dept" value="{{ dept }}"><br>
+    <label for="role">Role</label><br>
+    <input type="text" id="role" name="role" value="{{ role }}"><br>
+    <hr>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+</div>
+{% endblock %}

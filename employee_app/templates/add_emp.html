@@ -1,46 +1,57 @@
-<h3>Add employee.</h3>
+{% extends "base.html" %}
+{% block content %}
 
 
-<form action="/add_emp", method="post">
-     {% csrf_token %}
+<div class="container-fluid">
+    <h3 class="ml-5">Add an employee.</h3><hr>
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            
+<form action="/add_emp" method="post">
+    {% csrf_token %}
     <!-- <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input type="text" class="form-control" id="exampleInputEmail1" name="" value="">
     </div> -->
     <div class="mb-3">
-        <label for="first_name" class="form-label">First name</label>
-        <input type="text" class="form-control" id="first_name" name="first_name" value="{{ first_name }}">
+        <label for="first_name" class="form-label">First name</label><br>
+        <input type="text" id="first_name" name="first_name" value="{{ first_name }}">
     </div>
     <div class="mb-3">
-        <label for="last_name" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="last_name" name="last_name" value="{{last_name}}">
+        <label for="last_name" class="form-label">Last name</label><br>
+        <input type="text" id="last_name" name="last_name" value="{{last_name}}">
     </div>
     <div class="mb-3">
-        <label for="salary" class="form-label">Salary</label>
-        <input type="number" class="form-control" id="salary" name="salary" value="{{salary}}">
+        <label for="salary" class="form-label">Salary</label><br>
+        <input type="number" id="salary" name="salary" value="{{salary}}">
     </div>
     <div class="mb-3">
-        <label for="bouns" class="form-label">Bouns</label>
-        <input type="text" class="form-control" id="bouns" name="bouns" value="{{bouns}}">
+        <label for="bonus" class="form-label">Bonus</label><br>
+        <input type="number" id="bonus" name="bonus" value="{{bonus}}">
     </div>
     <div class="mb-3">
-        <label for="phone_number" class="form-label">Phone Number</label>
-        <input type="number" class="form-control" id="phone_number" name="phone_number" value="{{phone_number}}">
+        <label for="phone_number" class="form-label">Phone Number</label><br>
+        <input type="number" id="phone_number" name="phone_number" value="{{phone_number}}">
     </div>
     <div class="mb-3">
-        <label for="hire_date" class="form-label">Hire date</label>
-        <input type="date" class="form-control" id="hire_date" name="hire_date" value="{{hire_date}}">
+        <label for="hire_date" class="form-label">Hire date</label><br>
+        <input type="date" id="hire_date" name="hire_date" value="{{hire_date}}">
     </div>
     <div class="mb-3">
-        <label for="dept" class="form-label">Depertment</label>
-        <input type="text" class="form-control" id="dept" name="dept" value="{{dept}}">
+        <label for="dept" class="form-label">Depertment</label><br>
+        <input type="number" id="dept" name="dept" value="{{dept}}">
     </div>
     <div class="mb-3">
-        <label for="role" class="form-label">Role</label>
-        <input type="text" class="form-control" id="role" name="role" value="{{role}}">
+        <label for="role" class="form-label">Role</label><br>
+        <input type="number" id="role" name="role" value="{{role}}">
     </div>
 
 
 
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

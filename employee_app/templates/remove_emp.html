@@ -1,17 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="dropdown pb-5 mt-5">
-  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-    aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    {% for emp in all_employee %}
-    <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{ emp.last_name }} id {{emp.id }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+<div class="container container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-12 col-sm-12">
+      <div class="dropdown pb-5 mt-5">
+        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          {% for emp in all_employee %}
+          <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{ emp.last_name }} id {{emp.id }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

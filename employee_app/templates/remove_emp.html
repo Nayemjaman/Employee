@@ -11,7 +11,8 @@
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           {% for emp in all_employee %}
-          <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{ emp.last_name }} id {{emp.id }}</a>
+          <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{ emp.last_name }} id {{emp.id
+              }}</a>
           </li>
           {% endfor %}
         </ul>
